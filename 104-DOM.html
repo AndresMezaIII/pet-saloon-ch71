@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM)</title>
+</head>
+<body>
+    <h1>Document Object Model (DOM)</h1>
+
+    <!--get elements-->
+<section>
+    <h2 id="subSection-1">Getting Elements</h2>
+    <h3>DOM Manipulation</h3>
+
+    <p class = "updParagraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quidem architecto praesentium qui ullam? Unde officia tenetur soluta illo corrupti asperiores cumque laudantium. Repudiandae consequatur excepturi aliquid quisquam debitis enim.</p>
+
+    <p class = "updParagraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quidem architecto praesentium qui ullam? Unde officia
+        tenetur soluta illo corrupti asperiores cumque laudantium. Repudiandae consequatur excepturi aliquid quisquam
+        debitis enim.</p>
+
+        <button onclick="update()">Update</button>
+</section>
+    <!--add elements-->
+<!--remember to add onclick and the expected behavior-->
+    <section>
+        <h2>Adding Elements</h2>
+        <input type="text" placeholder="Type something..." id="inputText">
+        <button onclick="triggerAddAction()">Add</button>
+
+        <ul>
+            <li id="uList"></li>
+        </ul>
+    </section>
+
+    <script src="scripts/104-DOM.js"></script>
+</body>
+</html>

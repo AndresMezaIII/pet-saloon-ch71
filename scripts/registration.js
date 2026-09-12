@@ -1,37 +1,39 @@
 console.log("registration.js connected");
 
-let crestedCockatoo = {
-  Name: "Bert",
-  Age: 30,
-  Gender: "female",
-  Service: "none",
-  Breed: "Sulphur-Crested Cockatoo",
-};
+let registeredPets = [
+  {
+    Name: "Bowler",
+    Age: 3,
+    Gender: "male",
+    Service: "nails",
+    Breed: "Giant Schnauzer",
+  },
 
-let giantSchnauzer = {
-  Name: "Bowler",
-  Age: 3,
-  Gender: "male",
-  Service: "show dog",
-  Breed: "Giant Schnauzer",
-};
+  {
+    Name: "Cerberus",
+    Age: 4,
+    Gender: "female",
+    Service: "full",
+    Breed: "Norwegian Lundehund",
+  },
 
-let maineCoon = {
-  Name: "Sphinx",
-  Age: 7,
-  Gender: "female",
-  Service: "none",
-  Breed: "Maine Coon",
-};
+  {
+    Name: "Sphinx",
+    Age: 7,
+    Gender: "female",
+    Service: "brushing",
+    Breed: "Maine Coon",
+  },
+];
 
-function displayPets() {
-  let prefix = document.getElementById("regPets");
+/*function displayPets() {
+  return let prefix = document.getElementById("regPets");
+}*/
 
-  prefix.innerHTML += `<ol>
-                            <li>${crestedCockatoo.Name}</li>
-                            <li>${giantSchnauzer.Name}</li>
-                            <li>${maineCoon.Name}</li>
-                        </ol>`;
-}
+prefix.innerHTML += `<ol>
+                            <li>${registeredPets[0].Name}</li>
+                            <li>${registeredPets[1].Name}</li>
+                            <li>${registeredPets[2].Name}</li>
+                      </ol>`;
 
 displayPets();

@@ -50,12 +50,48 @@
     <!---->
 
     <h1>Registration</h1>
-
+<!--pet registration area-->
     <section>
       <h2 class="regHead2">Registered Pets</h2>
       <hr />
       <div id="regPets"></div>
-      <button>Register</button>
+
+    <!--pet registration form-->
+      <form id="registrationForm">
+        <fieldset>
+        <label for="name">Pet Name: </label>
+        <input type="text" name="name" id="name">
+        <label for="gender">Pet Gender: </label>
+        <select name="gender" id="gender" for="gender">
+          <option value="" disabled selected>Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        </fieldset>
+        <fieldset>
+        <label for="age">Pet Age: </label>
+        <input type="number" name="age" id="age">
+        <label for="breed">Breed: </label>
+        <input type="text" name="breed" id="breed">
+        </fieldset>
+        <fieldset>
+          <label for="services">Service: </label>
+          <select name="services" id="services">
+            <option value="" selected disabled>Service</option>
+            <option value="nail-clipping">Nail Clipping</option>
+            <option value="coat-grooming">Coat Grooming</option>
+            <option value="bath">Bath</option>
+            <option value="teeth">Teeth Cleaning</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <label for="email">
+            E-mail: 
+          </label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </fieldset>
+      </form>
+      <button id="res-btn" onclick="addPet()">Reserve</button>
     </section>
 
     <!--bootstrap js-->

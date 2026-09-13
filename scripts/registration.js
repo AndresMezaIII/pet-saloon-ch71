@@ -23,7 +23,7 @@ let registeredPets = [
     Gender: "female",
     Service: "brushing",
     Breed: "Maine Coon"
-  },
+  }
 ];
 
 let prefix = "";
@@ -39,3 +39,16 @@ prefix.innerHTML += `<ol>
                             <li>${registeredPets[1].Name}</li>
                             <li>${registeredPets[2].Name}</li>
                     </ol>`;
+
+function addPet () {
+  let petName = document.getElementById("name").value;
+  let petAge = document.getElementById("age").value;
+  let petBreed = document.getElementById("breed").value;
+  let petService = document.getElementById("services").value;
+  let petGender = document.getElementById("gender").value;
+  let petDemo = [];
+  petDemo.push({Name: petName, Age: petAge, Gender: petGender, Service: petService, Breed: petBreed});
+  console.log(petDemo);
+};
+
+addPet();

@@ -40,6 +40,17 @@ prefix.innerHTML += `<ol>
                             <li>${registeredPets[2].Name}</li>
                     </ol>`;
 
+const oPetList = document.createElement("ol");
+const oLiOne = document.createElement("li");
+const oLiTwo = document.createElement("li");
+const oLiThree = document.createElement("li");
+
+oPetList.appendChild(oLiOne);
+oPetList.appendChild(oLiTwo);
+oPetList.appendChild(oLiThree);
+
+document.body.appendChild(oPetList);
+
 function addPet () {
   let petName = document.getElementById("name").value;
   let petAge = document.getElementById("age").value;
@@ -47,8 +58,11 @@ function addPet () {
   let petService = document.getElementById("services").value;
   let petGender = document.getElementById("gender").value;
   let petDemo = [];
-  petDemo.push({Name: petName, Age: petAge, Gender: petGender, Service: petService, Breed: petBreed});
-  console.log(petDemo);
+  
+  petDemo.push({Name: petName, Age: Number(petAge), Gender: petGender, Service: petService, Breed: petBreed});
+
+  registeredPets = [...registeredPets, ...petDemo];
+  
+    
 };
 
-addPet();

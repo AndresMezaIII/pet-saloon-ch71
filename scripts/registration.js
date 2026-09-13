@@ -6,7 +6,7 @@ let registeredPets = [
     Age: 3,
     Gender: "male",
     Service: "nails",
-    Breed: "Giant Schnauzer",
+    Breed: "Giant Schnauzer"
   },
 
   {
@@ -14,7 +14,7 @@ let registeredPets = [
     Age: 4,
     Gender: "female",
     Service: "full",
-    Breed: "Norwegian Lundehund",
+    Breed: "Norwegian Lundehund"
   },
 
   {
@@ -22,18 +22,20 @@ let registeredPets = [
     Age: 7,
     Gender: "female",
     Service: "brushing",
-    Breed: "Maine Coon",
+    Breed: "Maine Coon"
   },
 ];
 
-/*function displayPets() {
-  return let prefix = document.getElementById("regPets");
-}*/
+let prefix = "";
+function displayPets() {
+  prefix = document.getElementById("regPets");
+  return prefix;
+};
+
+displayPets();
 
 prefix.innerHTML += `<ol>
                             <li>${registeredPets[0].Name}</li>
                             <li>${registeredPets[1].Name}</li>
                             <li>${registeredPets[2].Name}</li>
-                      </ol>`;
-
-displayPets();
+                    </ol>`;

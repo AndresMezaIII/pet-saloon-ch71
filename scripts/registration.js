@@ -1,5 +1,3 @@
-console.log("registration.js connected");
-
 let registeredPets = [
   {
     Name: "Bowler",
@@ -26,30 +24,24 @@ let registeredPets = [
   }
 ];
 
-let prefix = "";
-function displayPets() {
-  prefix = document.getElementById("regPets");
-  return prefix;
-};
-
-displayPets();
-
-prefix.innerHTML += `<ol>
-                            <li>${registeredPets[0].Name}</li>
-                            <li>${registeredPets[1].Name}</li>
-                            <li>${registeredPets[2].Name}</li>
-                    </ol>`;
-
+const oList = document.getElementById("regPets");
 const oPetList = document.createElement("ol");
 const oLiOne = document.createElement("li");
 const oLiTwo = document.createElement("li");
 const oLiThree = document.createElement("li");
 
+document.body.appendChild(oPetList);
+
+oList.appendChild(oPetList);
 oPetList.appendChild(oLiOne);
 oPetList.appendChild(oLiTwo);
 oPetList.appendChild(oLiThree);
 
-document.body.appendChild(oPetList);
+
+
+oLiOne.textContent = `${registeredPets[0].Name} ${registeredPets[0].Age} year old ${registeredPets[0].Breed}`;
+oLiTwo.textContent = `${registeredPets[1].Name} ${registeredPets[1].Age} year old ${registeredPets[1].Breed} `;
+oLiThree.textContent = `${registeredPets[2].Name} ${registeredPets[2].Age} year old ${registeredPets[2].Breed}`;
 
 function addPet () {
   let petName = document.getElementById("name").value;
@@ -63,6 +55,10 @@ function addPet () {
 
   registeredPets = [...registeredPets, ...petDemo];
   
-    
+  const getList = document.getElementById("regPets");
+  const liLI = document.createElement("li");
+  
+  oPetList.appendChild(liLI);
+  liLI.textContent = `${petName} ${petAge} year old ${petBreed}`;
 };
 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!---->
+    <link rel="stylesheet" href="styles/104-bootstrap.css">
+    <title>Bootstrap</title>
+</head>
+<body>
+    <h1>Student Registration</h1>
+    <form class="bg-light p-4 border rounded">
+    <div class="input-group mb-3">
+       <span class="input-group-text">Name</span>
+       <input type="text" class="form-control" placeholder="Caleb" id="firstName"> 
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="lastName">Last Name</span>
+        <input type="text" class="form-control" placeholder="Williams">
+        
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text">Cohort</span>
+        <input type="number" class="form-control" placeholder="18" id="cohort">
+    
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text">E-mail</span>
+        <input type="email" class="form-control" placeholder="c.williams@chicagoqb.com" id="email">
+    
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon2">Class</span>
+        <select class="form-select" id="studentClass">
+            <option selected disabled>Select a class...</option>
+            <option>Math 101</option>
+            <option>English Composition</option>
+            <option>Beginning Spanish</option>
+        </select>
+    
+    </div>
+    <div class="d-flex justify-content-end gap-3">
+        <button class="gap-3 btn btn-primary" type="submit" onclick="Register(event)">Register</button>
+
+        <button class="d-flex justify-content-end gap-3 btn btn-secondary" type="reset">Reset</button>
+    </div>
+    </form>
+    <br>
+    <h2>Students List</h2>
+    <table class="table p-4 m-4">
+        <tr>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Cohort</th>
+            <th>Email</th>
+            <th>Class</th>
+        </tr>
+        <tbody>
+
+        </tbody>
+    </table> 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

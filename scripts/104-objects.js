@@ -67,3 +67,15 @@ let productThree = {
 let p2 = document.getElementById("paragraph-2");
 
 p2.innerHTML += `Our latest product is a ${productThree.name} which is $${productThree.price}. The toy is ${productThree.color} and it is a ${productThree.size} toy. One of our oldest products is a ${productOne.size} ${productOne.color} ${productOne.name}. It is $${productOne.price}. This months special is a ${productTwo.name} that will be seen all over the skies with it's bright ${productTwo.color} color. It's only of ${productTwo.size} size but it has a big ticket price, $${productTwo.price}! Better save that allowance boys and girls!`;
+
+//object constructor -- a function that will construct objects, name convention should start with a capital letter and it is referred to in the singular, a name, a lastName; etc.
+
+function Student(name, lastName, age, isStudent) {
+  this.name = name;
+  this.lastName = lastName;
+  this.age = age;
+  this.isStudent = isStudent;
+  //'this' refers to whatever object is created
+}
+
+let student = new Student("Timothy", "Leary", 75, false);

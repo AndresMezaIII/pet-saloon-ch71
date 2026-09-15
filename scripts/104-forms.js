@@ -1,9 +1,10 @@
-console.log("connected");
+
 
 function getValues() {
-    let formProd = document.getElementById("prodInput").value;
+    let formProductName = document.getElementById("prodInput").value;
     let formPrice = document.getElementById("inputPrice").value;
-    let formCat = document.getElementById("catInput").value;
+    let formCategory = document.getElementById("catInput").value;
     
-    alert(`${formProd} ${formCat} $${formPrice}`);
+    alert(`Product: ${formProductName} - Price: ${formPrice} - Category: ${formCategory}`);
 }
+

@@ -50,53 +50,12 @@
     <!---->
 
     <h1>Registration</h1>
-<!--pet registration area-->
+    <!--pet registration area-->
     <section>
       <h2 class="regHead2">Registered Pets</h2>
       <hr />
       <div id="regPets"></div>
-
-    <!--pet registration form-->
-      <form id="registrationForm">
-        <fieldset>
-        <label for="name">Pet Name: </label>
-        <input type="text" name="name" id="name" placeholder="Reggie">
-        <label for="gender">Pet Gender: </label>
-        <select name="gender" id="gender" for="gender">
-          <option value="" disabled selected>Gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
-        </fieldset>
-        <fieldset>
-        <label for="age">Pet Age: </label>
-        <input type="number" name="age" id="age">
-        <label for="breed">Breed: </label>
-        <input type="text" name="breed" id="breed" placeholder="Lasa Apso">
-        </fieldset>
-        <fieldset>
-          <label for="services">Service: </label>
-          <select name="services" id="services">
-            <option value="" selected disabled>Service</option>
-            <option value="nail-clipping">Nail Clipping</option>
-            <option value="coat-grooming">Coat Grooming</option>
-            <option value="bath">Bath</option>
-            <option value="teeth">Teeth Cleaning</option>
-            <option value="full service">Full Service</option>
-          </select>
-        </fieldset>
-        <fieldset>
-          <label for="email">
-            E-mail: 
-          </label>
-          <input type="email" id="email" name="email" autocomplete="email" placeholder = "youremail@example.com" required>
-        </fieldset>
-        <button id="res-btn" onclick="addPet()">Reserve</button>
-        <button id="rem-button" onclick="removePet()">Remove</button>
-        </section>
-      </form>
-      
-
+    </section>
     <!--bootstrap js-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

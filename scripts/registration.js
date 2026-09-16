@@ -41,3 +41,36 @@ oPetList.appendChild(oLiThree);
 oLiOne.textContent = `${registeredPets[0].Name} ${registeredPets[0].Age} year old ${registeredPets[0].Breed}`;
 oLiTwo.textContent = `${registeredPets[1].Name} ${registeredPets[1].Age} year old ${registeredPets[1].Breed} `;
 oLiThree.textContent = `${registeredPets[2].Name} ${registeredPets[2].Age} year old ${registeredPets[2].Breed}`;
+
+function NewPetInfo(name, age, breed, gender, service) {
+  this.name = name;
+  this.age = age;
+  this.breed = breed;
+  this.gender = gender;
+  this.service = service;
+}
+
+let NewPetOne = new NewPetInfo(
+  "Bullseye",
+  3,
+  "American Pit Bull",
+  "male",
+  "Ear Cleaning",
+);
+let NewPetTwo = new NewPetInfo(
+  "Stretch",
+  5,
+  "Serval",
+  "female",
+  "Teeth Cleaning",
+);
+let NewPetThree = new NewPetInfo(
+  "Dodge",
+  2,
+  "Border Collie",
+  "male",
+  "Full Service",
+);
+
+//registeredPets.push(NewPetsOne, NewPetsTwo, NewPetsThree);
+console.log(NewPetOne, NewPetTwo, NewPetThree);

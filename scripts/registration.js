@@ -72,5 +72,11 @@ let NewPetThree = new NewPetInfo(
   "Full Service",
 );
 
-//registeredPets.push(NewPetsOne, NewPetsTwo, NewPetsThree);
+registeredPets.push(NewPetOne, NewPetTwo, NewPetThree);
 console.log(NewPetOne, NewPetTwo, NewPetThree);
+
+const tableSpace = document.getElementById("sectionTwo");
+const petTable = document.createElement("table");
+tableSpace.appendChild(petTable);
+const head = document.createElement("head");
+petTable.appendChild(head);

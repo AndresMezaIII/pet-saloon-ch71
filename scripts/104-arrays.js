@@ -32,7 +32,7 @@ console.log(studentsList[0].name);
 console.log(studentsList[1].isStudent);
 console.log(studentsList[0].age);
 
-let tLiteralName = `Hey, this is ${studentsList[0].name} and I am ${studentsList[0].age}!`;
+let tLiteralName = `Hey, this is ${studentsList[0].name} and I am ${studentsList[0].age} years old!`;
 
 console.log(tLiteralName);
 
@@ -40,22 +40,24 @@ let gamesList = [
   {
     title: "Altered Beast",
     platform: "Sega Genesis",
-    releaseYear: 1992
+    releaseYear: 1992,
   },
 
   {
     title: "Super Mario Bros. 3",
     platform: "Super Nintendo",
-    releaseYear: 1995
+    releaseYear: 1995,
   },
 
   {
     title: "Metroid",
     platform: "Nintendo Entertainment System",
-    releaseYear: 1991
+    releaseYear: 1991,
   },
 ];
 console.log(gamesList[1]);
 
-console.log(`The title of the first game ${gamesList[0].title}, the second game's platform is ${gamesList[1].platform}, and the third games title, platform, and release date is ${gamesList[2].title}, ${gamesList[2].platform}, ${gamesList[2].releaseYear}`);
+console.log(
+  `The title of the first game ${gamesList[0].title}, the second game's platform is ${gamesList[1].platform}, and the third games title, platform, and release date is ${gamesList[2].title}, ${gamesList[2].platform}, ${gamesList[2].releaseYear}`,
+);
 console.log(gamesList.length);

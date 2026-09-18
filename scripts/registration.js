@@ -3,7 +3,7 @@ let registeredPets = [
     Name: "Bowler",
     Age: 3,
     Gender: "male",
-    Service: "nails",
+    Service: "Nails",
     Breed: "Giant Schnauzer",
   },
 
@@ -11,7 +11,7 @@ let registeredPets = [
     Name: "Cerberus",
     Age: 4,
     Gender: "female",
-    Service: "full",
+    Service: "Full",
     Breed: "Norwegian Lundehund",
   },
 
@@ -19,7 +19,7 @@ let registeredPets = [
     Name: "Sphinx",
     Age: 7,
     Gender: "female",
-    Service: "brushing",
+    Service: "Brushing",
     Breed: "Maine Coon",
   },
 ];

@@ -42,12 +42,12 @@ oLiOne.textContent = `${registeredPets[0].Name} ${registeredPets[0].Age} year ol
 oLiTwo.textContent = `${registeredPets[1].Name} ${registeredPets[1].Age} year old ${registeredPets[1].Breed} `;
 oLiThree.textContent = `${registeredPets[2].Name} ${registeredPets[2].Age} year old ${registeredPets[2].Breed}`;
 
-function NewPetInfo(name, age, breed, gender, service) {
-  this.name = name;
-  this.age = age;
-  this.breed = breed;
-  this.gender = gender;
-  this.service = service;
+function NewPetInfo(Name, Age, Breed, Gender, Service) {
+  this.Name = Name;
+  this.Age = Age;
+  this.Breed = Breed;
+  this.Gender = Gender;
+  this.Service = Service;
 }
 
 let NewPetOne = new NewPetInfo(
@@ -73,10 +73,29 @@ let NewPetThree = new NewPetInfo(
 );
 
 registeredPets.push(NewPetOne, NewPetTwo, NewPetThree);
-console.log(NewPetOne, NewPetTwo, NewPetThree);
 
-const tableSpace = document.getElementById("sectionTwo");
-const petTable = document.createElement("table");
-tableSpace.appendChild(petTable);
-const head = document.createElement("head");
-petTable.appendChild(head);
+const getTable = document.getElementById("tbody");
+getTable.textContent = "";
+
+//i used AI here to help me figure out my errors which were that I was creating my cells outside of the loop causing the loop to overwrite them, and also I assigned a class to tbody originally, not an id. I also used semicolons inside the array instead of commas in the for of (quite the nifty function). I learned the for of from ChatGPT as well.
+function displayRow() {
+  for (let i = 0; i < registeredPets.length; i++) {
+    const tableRow = document.createElement("tr");
+    const pet = registeredPets[i];
+
+    for (const value of [
+      pet.Name,
+      pet.Age,
+      pet.Breed,
+      pet.Gender,
+      pet.Service,
+    ]) {
+      const data = document.createElement("td");
+      data.textContent = value;
+      tableRow.appendChild(data);
+    }
+    getTable.appendChild(tableRow);
+  }
+}
+
+displayRow();

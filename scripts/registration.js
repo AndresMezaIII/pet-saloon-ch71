@@ -33,17 +33,17 @@ const oLiThree = document.createElement("li");
 
 //I don't understand why using this line and the next is necessary vs. one over the other, but the code doesn't work without them both.
 document.body.appendChild(oPetList);
-
 oList.appendChild(oPetList);
+
 oPetList.appendChild(oLiOne);
 oPetList.appendChild(oLiTwo);
 oPetList.appendChild(oLiThree);
 
-oLiOne.textContent = `${registeredPets[0].Name} ${registeredPets[0].Age} year old ${registeredPets[0].Breed}`;
-oLiTwo.textContent = `${registeredPets[1].Name} ${registeredPets[1].Age} year old ${registeredPets[1].Breed} `;
-oLiThree.textContent = `${registeredPets[2].Name} ${registeredPets[2].Age} year old ${registeredPets[2].Breed}`;
+oLiOne.textContent = `${registeredPets[0].Name}`;
+oLiTwo.textContent = `${registeredPets[1].Name}`;
+oLiThree.textContent = `${registeredPets[2].Name}`;
 
-function NewPetInfo(Name, Age, Breed, Gender, Service) {
+function PetInfo(Name, Age, Breed, Gender, Service) {
   this.Name = Name;
   this.Age = Age;
   this.Breed = Breed;
@@ -51,34 +51,21 @@ function NewPetInfo(Name, Age, Breed, Gender, Service) {
   this.Service = Service;
 }
 
-let NewPetOne = new NewPetInfo(
+let PetOne = new PetInfo(
   "Bullseye",
   3,
   "American Pit Bull",
   "male",
   "Ear Cleaning",
 );
-let NewPetTwo = new NewPetInfo(
-  "Stretch",
-  5,
-  "Serval",
-  "female",
-  "Teeth Cleaning",
-);
-let NewPetThree = new NewPetInfo(
-  "Dodge",
-  2,
-  "Border Collie",
-  "male",
-  "Full Service",
-);
+let PetTwo = new PetInfo("Stretch", 5, "Serval", "female", "Teeth Cleaning");
+let PetThree = new PetInfo("Dodge", 2, "Border Collie", "male", "Full Service");
 
-registeredPets.push(NewPetOne, NewPetTwo, NewPetThree);
+registeredPets.push(PetOne, PetTwo, PetThree);
 
 const getTable = document.getElementById("tbody");
 getTable.textContent = "";
 
-//I used AI here to help me figure out my errors which were that I was creating my cells outside of the loop causing the loop to overwrite them, and also I assigned a class to tbody originally, not an id. I also used semicolons inside the array instead of commas in the for of (quite the nifty function). I learned the for of from ChatGPT as well.
 function importDataToRows() {
   for (let i = 0; i < registeredPets.length; i++) {
     const tableRow = document.createElement("tr");

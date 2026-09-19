@@ -31,6 +31,7 @@ const oLiOne = document.createElement("li");
 const oLiTwo = document.createElement("li");
 const oLiThree = document.createElement("li");
 
+//I don't understand why using this line and the next is necessary vs. one over the other, but the code doesn't work without them both.
 document.body.appendChild(oPetList);
 
 oList.appendChild(oPetList);
@@ -77,8 +78,8 @@ registeredPets.push(NewPetOne, NewPetTwo, NewPetThree);
 const getTable = document.getElementById("tbody");
 getTable.textContent = "";
 
-//i used AI here to help me figure out my errors which were that I was creating my cells outside of the loop causing the loop to overwrite them, and also I assigned a class to tbody originally, not an id. I also used semicolons inside the array instead of commas in the for of (quite the nifty function). I learned the for of from ChatGPT as well.
-function displayRow() {
+//I used AI here to help me figure out my errors which were that I was creating my cells outside of the loop causing the loop to overwrite them, and also I assigned a class to tbody originally, not an id. I also used semicolons inside the array instead of commas in the for of (quite the nifty function). I learned the for of from ChatGPT as well.
+function importDataToRows() {
   for (let i = 0; i < registeredPets.length; i++) {
     const tableRow = document.createElement("tr");
     const pet = registeredPets[i];
@@ -98,4 +99,4 @@ function displayRow() {
   }
 }
 
-displayRow();
+importDataToRows();

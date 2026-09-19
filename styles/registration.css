@@ -23,6 +23,7 @@ h2.regHead2 {
 }
 
 /*ol styling learned from CSS Tricks*/
+/*use a custom counter to assign ordered numbers to line items*/
 ol {
   list-style-type: none;
   counter-reset: list-counter;
@@ -50,5 +51,10 @@ ol li::before {
 }
 
 form {
+  width: 20%;
+  margin: 0 auto;
+}
+
+label {
   width: 20%;
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <title>Forms</title>
+</head>
+<body class="m-3">
+    <h1>Students Registration</h1>
+
+    <form class="bg-light p-4 m-4 border rounded">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Name</span>
+            <input id="studentName" type="text" class="form-control" placeholder="John">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Lastname</span>
+            <input id="studentLastname" type="text" class="form-control" placeholder="Wick">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Cohort</span>
+            <input id="studentCohort" type="number" class="form-control" placeholder="71">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Email</span>
+            <input id="studentEmail" type="email" class="form-control" placeholder="john.wick@sdgku.edu">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Class</span>
+            <select id="studentClass" class="form-select">
+                <option value="">Select a class</option>
+                <option value="Math 1">Math 1</option>
+                <option value="Math 2">Math 2</option>
+                <option value="Math 3">Math 3</option>
+            </select>
+        </div>
+
+        <div class="d-flex justify-content-end gap-3">
+            <button onclick="registerStudent(event)" class="btn btn-primary" type="submit">Register</button>
+            <button class="btn btn-secondary" type="reset">Reset</button>
+        </div>
+
+    </form>
+
+    <h2>Students List</h2>
+    <table class="table p-4 m-4">
+        <!-- Header -->
+        <tr>
+            <th>Name</th>
+            <th>Lastname</th>
+            <th>Cohort</th>
+            <th>Email</th>
+            <th>Class</th>
+            <th>Delete</th>
+        </tr>
+
+        <!-- Body -->
+        <tbody id="body">
+           
+        </tbody>
+
+    </table>
+
+
+    <div class="m-5 border p-4">
+        <h3>Testing my First Anonymous Function</h3>
+
+        <button id="testButton" class="btn btn-danger">Test</button>
+    </div>
+
+    <script src="./scripts/104-students-form.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 body {
   font-family: serif;
   padding: 1rem;
-  background-image: url("/images/background.png");
+  background-color: #badbcc;
   height: 100vh;
   width: 100vw;
 }
@@ -17,9 +17,6 @@ h2.regHead2 {
   font-size: 48px;
   font-weight: 700;
   display: inline-block;
-  background: linear-gradient(45deg, rgb(79, 20, 20), black);
-  background-clip: text;
-  color: transparent;
 }
 
 /*ol styling learned from CSS Tricks*/
@@ -58,4 +55,3 @@ form {
 label {
   width: 20%;
 }
-

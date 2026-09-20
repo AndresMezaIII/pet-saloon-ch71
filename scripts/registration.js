@@ -25,28 +25,28 @@ let registeredPets = [
 ];
 
 //used summaries from Google to clarify using .createElement and .appendChild
-const OLIST = document.getElementById("regPets");
-const OPETLIST = document.createElement("ol");
-const OLIONE = document.createElement("li");
-const OLITWO = document.createElement("li");
-const OLITHREE = document.createElement("li");
-const OLIFOUR = document.createElement("li");
-const OLIFIVE = document.createElement("li");
-const OLISIX = document.createElement("li");
+//const OLIST = document.getElementById("regPets");
+//const OPETLIST = document.createElement("ol");
+//const OLIONE = document.createElement("li");
+//const OLITWO = document.createElement("li");
+//const OLITHREE = document.createElement("li");
+//const OLIFOUR = document.createElement("li");
+//const OLIFIVE = document.createElement("li");
+//const OLISIX = document.createElement("li");
 //I don't understand why using this line and the next is necessary vs. one over the other, but the code doesn't work without them both.
-document.body.appendChild(OPETLIST);
-OLIST.appendChild(OPETLIST);
+//document.body.appendChild(OPETLIST);
+//OLIST.appendChild(OPETLIST);
 
-OPETLIST.appendChild(OLIONE);
-OPETLIST.appendChild(OLITWO);
-OPETLIST.appendChild(OLITHREE);
-OPETLIST.appendChild(OLIFOUR);
-OPETLIST.appendChild(OLIFIVE);
-OPETLIST.appendChild(OLISIX);
+//OPETLIST.appendChild(OLIONE);
+//OPETLIST.appendChild(OLITWO);
+//OPETLIST.appendChild(OLITHREE);
+//OPETLIST.appendChild(OLIFOUR);
+//OPETLIST.appendChild(OLIFIVE);
+//OPETLIST.appendChild(OLISIX);
 
-OLIONE.textContent = `${registeredPets[0].Name}`;
-OLITWO.textContent = `${registeredPets[1].Name}`;
-OLITHREE.textContent = `${registeredPets[2].Name}`;
+//OLIONE.textContent = `${registeredPets[0].Name}`;
+//OLITWO.textContent = `${registeredPets[1].Name}`;
+//OLITHREE.textContent = `${registeredPets[2].Name}`;
 
 function PetInfo(Name, Age, Breed, Gender, Service) {
   this.Name = Name;
@@ -72,9 +72,9 @@ const PETTHREE = new PetInfo(
   "Full Service",
 );
 
-OLIFOUR.textContent = `${PETONE.Name}`;
-OLIFIVE.textContent = `${PETTWO.Name}`;
-OLISIX.textContent = `${PETTHREE.Name}`;
+//OLIFOUR.textContent = `${PETONE.Name}`;
+//OLIFIVE.textContent = `${PETTWO.Name}`;
+//OLISIX.textContent = `${PETTHREE.Name}`;
 
 registeredPets.push(PETONE, PETTWO, PETTHREE);
 
@@ -97,6 +97,9 @@ function importDataToRows() {
       DATA.textContent = value;
       TABLEROW.appendChild(DATA);
     }
+    const BUTTONCELL = document.createElement("td");
+    BUTTONCELL.innerHTML += `<button class="btn btm-sm btn-danger">Delete</button>`;
+    TABLEROW.appendChild(BUTTONCELL);
     GETTABLE.appendChild(TABLEROW);
   }
 }
@@ -105,7 +108,6 @@ importDataToRows();
 
 function displayRow(event) {
   event.preventDefault();
-
   let name = document.getElementById("tdOne").value;
   let age = document.getElementById("tdTwo").value;
   let breed = document.getElementById("tdThree").value;
@@ -123,7 +125,7 @@ function displayRow(event) {
             <td> ${newPet.Breed} </td>
             <td> ${newPet.Gender} </td>
             <td> ${newPet.Service} </td>
-            <td> <button class="btn btn-danger del-btn">Delete</button></td>
+            <td class="d-flex justify-content-center"> <button class="btn btn-danger del-btn">Delete</button></td>
     `;
 
   // Detele Functionality

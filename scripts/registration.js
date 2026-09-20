@@ -23,7 +23,7 @@ let registeredPets = [
     Breed: "Maine Coon",
   },
 ];
-
+//Adding pets to an ordered list
 //used summaries from Google to clarify using .createElement and .appendChild
 //const OLIST = document.getElementById("regPets");
 //const OPETLIST = document.createElement("ol");
@@ -47,7 +47,7 @@ let registeredPets = [
 //OLIONE.textContent = `${registeredPets[0].Name}`;
 //OLITWO.textContent = `${registeredPets[1].Name}`;
 //OLITHREE.textContent = `${registeredPets[2].Name}`;
-
+//add pet constructor
 function PetInfo(Name, Age, Breed, Gender, Service) {
   this.Name = Name;
   this.Age = Age;
@@ -71,16 +71,17 @@ const PETTHREE = new PetInfo(
   "male",
   "Full Service",
 );
-
+//writing in constructor pets to the table
 //OLIFOUR.textContent = `${PETONE.Name}`;
 //OLIFIVE.textContent = `${PETTWO.Name}`;
 //OLISIX.textContent = `${PETTHREE.Name}`;
 
 registeredPets.push(PETONE, PETTWO, PETTHREE);
-
+//importing all pets to the table and adding the delete button
 const GETTABLE = document.getElementById("tbody");
 GETTABLE.textContent = "";
 
+//for each of function learned from google
 function importDataToRows() {
   for (let i = 0; i < registeredPets.length; i++) {
     const TABLEROW = document.createElement("tr");
@@ -94,13 +95,21 @@ function importDataToRows() {
       PET.Service,
     ]) {
       const DATA = document.createElement("td");
-      DATA.textContent = value;
+      DATA.innerHTML += value;
       TABLEROW.appendChild(DATA);
     }
     const BUTTONCELL = document.createElement("td");
-    BUTTONCELL.innerHTML += `<button class="btn btm-sm btn-danger">Delete</button>`;
+    BUTTONCELL.innerHTML += `<button class="btn btm-sm btn-danger" id="del-btn">Delete</button>`;
     TABLEROW.appendChild(BUTTONCELL);
     GETTABLE.appendChild(TABLEROW);
+    TABLEROW.querySelector("#del-btn").addEventListener("click", function () {
+      const confirmation = confirm(
+        "Are you sure you want to delete this reservation?",
+      );
+      if (confirmation) {
+        TABLEROW.remove();
+      }
+    });
   }
 }
 
@@ -125,12 +134,12 @@ function displayRow(event) {
             <td> ${newPet.Breed} </td>
             <td> ${newPet.Gender} </td>
             <td> ${newPet.Service} </td>
-            <td class="d-flex justify-content-center"> <button class="btn btn-danger del-btn">Delete</button></td>
+            <td> <button class="btn btn-danger del-btn">Delete</button></td>
     `;
 
-  // Detele Functionality
+  // Detele Functionality for added pets
   ROW.querySelector(".del-btn").addEventListener("click", function () {
-    let confirmation = confirm(
+    const confirmation = confirm(
       "Are you sure you want to delete this reservation?",
     );
 

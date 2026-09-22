@@ -139,11 +139,11 @@ function displayRow(event) {
 
   // Detele Functionality for added pets
   ROW.querySelector(".del-btn").addEventListener("click", function () {
-    const confirmation = confirm(
+    const CONFIRMATION = confirm(
       "Are you sure you want to delete this reservation?",
     );
 
-    if (confirmation) {
+    if (CONFIRMATION) {
       ROW.remove();
     }
   });

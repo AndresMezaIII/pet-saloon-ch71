@@ -1,3 +1,4 @@
+//working with the register button
 $("#registerService").click(function (event) {
   event.preventDefault();
   //1. get values
@@ -10,4 +11,20 @@ $("#registerService").click(function (event) {
     //change border
     $("#serviceInput").css("border", "solid 1px red");
   }
+
+  if (description === "") {
+    $("#descriptionInput").css("border", "solid 1px red");
+  }
+
+  if (price === "") {
+    $("#priceInput").css("border", "solid 1px red");
+  }
+});
+
+//clearing input
+$("#clearForm").click(function (event) {
+  event.preventDefault();
+  $("#serviceInput").css("border", "").val("");
+  $("#descriptionInput").css("border", "").val("");
+  $("#priceInput").css("border", "").val("");
 });

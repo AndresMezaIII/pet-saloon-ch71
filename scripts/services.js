@@ -6,6 +6,14 @@ $("#registerService").click(function (event) {
   let description = $("#descriptionInput").val().trim();
   let price = $("#priceInput").val().trim();
 
+  function Service() {
+    this.Service = service;
+    this.Description = description;
+    this.Price = price;
+  }
+
+  let services = new Service(service, description, price);
+
   //2. Use the values
   if (service === "") {
     //change border

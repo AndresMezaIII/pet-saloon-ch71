@@ -33,7 +33,7 @@ function registerStudent(event) {
 
   // Detele Functionality
   row.querySelector(".del-btn").addEventListener("click", function () {
-    let confirmation = confirm("Are you sure you want to delete this studen?");
+    let confirmation = confirm("Are you sure you want to delete this student?");
 
     if (confirmation) {
       row.remove();
@@ -45,7 +45,6 @@ function registerStudent(event) {
 
 // ==== ANONYMOUS FUNCTION - TEST ===
 //const button = document.querySelector("#testButton");
-
 document.querySelector("#testButton").addEventListener("click", function () {
   alert("Button Clicked!");
 });

@@ -18,6 +18,8 @@ $("#registerService").click(function (event) {
   if (service === "") {
     //change border
     $("#serviceInput").css("border", "solid 1px red");
+  } else {
+    localStorage.setItem("Service", service);
   }
 
   if (description === "") {
@@ -27,6 +29,13 @@ $("#registerService").click(function (event) {
   if (price === "") {
     $("#priceInput").css("border", "solid 1px red");
   }
+
+  //3. add service
+  $("#registerService").click(function () {
+    localStorage.setItem("Service", service);
+    let addService = localStorage.getItem("Service");
+    $("#tdFive").html(`"<option>" + ${addService} + "</option"`);
+  });
 });
 
 //clearing input
@@ -35,4 +44,8 @@ $("#clearForm").click(function (event) {
   $("#serviceInput").css("border", "").val("");
   $("#descriptionInput").css("border", "").val("");
   $("#priceInput").css("border", "").val("");
+});
+
+$("#toggle").click(function () {
+  $("body").toggleClass("dark-mode");
 });

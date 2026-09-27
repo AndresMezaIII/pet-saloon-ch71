@@ -47,6 +47,7 @@ let registeredPets = [
 //OLIONE.textContent = `${registeredPets[0].Name}`;
 //OLITWO.textContent = `${registeredPets[1].Name}`;
 //OLITHREE.textContent = `${registeredPets[2].Name}`;
+
 //add pet constructor
 function PetInfo(Name, Age, Breed, Gender, Service) {
   this.Name = Name;
@@ -71,6 +72,7 @@ const PETTHREE = new PetInfo(
   "male",
   "Full Service",
 );
+
 //writing in constructor pets to the table
 //OLIFOUR.textContent = `${PETONE.Name}`;
 //OLIFIVE.textContent = `${PETTWO.Name}`;
@@ -81,7 +83,8 @@ registeredPets.push(PETONE, PETTWO, PETTHREE);
 const GETTABLE = document.getElementById("tbody");
 GETTABLE.textContent = "";
 
-//for each of function learned from google
+//for each of function learned from google, used
+//to import registeredPets array to the table
 function importDataToRows() {
   for (let i = 0; i < registeredPets.length; i++) {
     const TABLEROW = document.createElement("tr");
@@ -99,7 +102,7 @@ function importDataToRows() {
       TABLEROW.appendChild(DATA);
     }
     const BUTTONCELL = document.createElement("td");
-    BUTTONCELL.innerHTML += `<button class="btn btm-sm btn-danger" id="del-btn">Delete</button>`;
+    BUTTONCELL.innerHTML += `<button class="deleteBtn btn btm-sm btn-danger" id="del-btn">Delete</button>`;
     TABLEROW.appendChild(BUTTONCELL);
     GETTABLE.appendChild(TABLEROW);
     TABLEROW.querySelector("#del-btn").addEventListener("click", function () {
@@ -115,6 +118,7 @@ function importDataToRows() {
 
 importDataToRows();
 
+//add a new row and client to the table
 function displayRow(event) {
   event.preventDefault();
   let name = document.getElementById("tdOne").value;
@@ -134,10 +138,10 @@ function displayRow(event) {
             <td> ${newPet.Breed} </td>
             <td> ${newPet.Gender} </td>
             <td> ${newPet.Service} </td>
-            <td> <button class="btn btn-danger del-btn">Delete</button></td>
+            <td> <button class="deleteBtn btn btn-danger del-btn">Delete</button></td>
     `;
 
-  // Detele Functionality for added pets
+  // Delete Functionality for added pets
   ROW.querySelector(".del-btn").addEventListener("click", function () {
     const CONFIRMATION = confirm(
       "Are you sure you want to delete this reservation?",
@@ -150,3 +154,5 @@ function displayRow(event) {
 
   tbody.appendChild(ROW);
 }
+
+let regName = $("#")

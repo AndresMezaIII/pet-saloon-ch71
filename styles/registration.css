@@ -1,19 +1,50 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+:root {
+  --background-color: #f4f6f2;
+  --text-color: #20231f;
+  --accent-color: #8a5a3c;
+  --surface-color: #e3e7e2;
+}
+
+* {
+  padding: 5px;
+}
 
 body {
-  font-family: serif;
+  font-family: "Roboto", sans-serif;
   padding: 1rem;
-  background-color: #badbcc;
   height: 100vh;
   width: 100vw;
+  background-color: var(--background-color);
+}
+
+.dark-mode {
+  --background-color: #041a63;
+  --text-color: #dfe5e1;
+  --accent-color: #d49a78;
+  --surface-color: #4c4d49;
+}
+
+nav {
+  width: 98.25%;
+  border-radius: 10px;
+}
+
+.navbar {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {
-  text-align: right;
+  color: var(--text-color);
 }
 
 /*Gemini AI Overview, all code was researched before use*/
-h2.regHead2 {
+h2 {
   font-size: 48px;
   font-weight: 700;
   display: inline-block;
@@ -21,7 +52,8 @@ h2.regHead2 {
 
 /*ol styling learned from CSS Tricks*/
 /*use a custom counter to assign ordered numbers to line items*/
-ol {
+/*ol {
+
   list-style-type: none;
   counter-reset: list-counter;
   display: flex;
@@ -47,11 +79,118 @@ ol li::before {
   line-height: 1;
 }
 
+*/
+
+/* form stuff */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.form-container img {
+  width: 30%;
+  height: 30%;
+}
+
 form {
   /*width: 20%;*/
   margin: 0 auto;
+  width: 25%;
+  padding: 10px;
+  margin: 3px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--accent-color);
+}
+
+input {
+  width: 20%;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
 }
 
 label {
-  width: 20%;
+  padding: 5px;
+}
+
+select {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+/* table stuff */
+
+#sectionTwo {
+  display: flex;
+  justify-content: center;
+}
+
+.table-form {
+  width: 60%;
+}
+
+.button-div {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+}
+
+.submitBtn {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  padding: 5px;
+  border: #3039f8;
+  margin: 5px;
+}
+
+.resetBtn {
+  border-radius: 5px;
+  background-color: gray;
+  border: white;
+  padding: 5px;
+  margin: 5px;
+}
+
+.deleteBtn {
+  border-radius: 5px;
+  background-color: #ff0e0e;
+  border: #ff0e0e;
+  color: white;
+}
+
+/* SERVICES PAGE */
+
+.form-section {
+  display: flex;
+  justify-content: center;
+}
+
+p.partners {
+  font-size: 1.5rem;
+  width: 40%;
+  margin-top: 60px;
+  color: var(--text-color);
+}
+
+.toggle {
+  padding: 5px;
+  background-color: rgb(74, 74, 201);
+  margin-left: 4px;
+  color: white;
+  border: rgb(52, 52, 209);
+  border-radius: 2px;
+}
+
+.toggle:hover {
+  background-color: rgb(38, 38, 156);
+  transition: opacity 0.5s ease;
 }

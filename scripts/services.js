@@ -31,10 +31,9 @@ $("#registerService").click(function (event) {
   }
 
   //3. add service
-  $("#registerService").click(function () {
+  $("#registerService").click(function (e) {
+    e.preventDefault();
     localStorage.setItem("Service", service);
-    let addService = localStorage.getItem("Service");
-    $("#tdFive").html(`"<option>" + ${addService} + "</option"`);
   });
 });
 
@@ -49,3 +48,5 @@ $("#clearForm").click(function (event) {
 $("#toggle").click(function () {
   $("body").toggleClass("dark-mode");
 });
+
+

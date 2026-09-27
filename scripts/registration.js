@@ -154,5 +154,12 @@ function displayRow(event) {
 
   tbody.appendChild(ROW);
 }
-
-let regName = $("#")
+//ai assisted, i understand the code but came at the end of using .html in my thinking and ai put me on to .append()
+$(function () {
+  const SERVICE = localStorage.getItem("Service");
+  if (SERVICE) {
+    $('select[name = "services"]').append(
+      `<option value="${SERVICE}">${SERVICE}</option>`,
+    );
+  }
+});

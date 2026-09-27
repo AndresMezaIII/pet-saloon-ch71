@@ -154,7 +154,7 @@ function displayRow(event) {
 
   tbody.appendChild(ROW);
 }
-//ai assisted, i understand the code but came at the end of using .html in my thinking and ai put me on to .append()
+//ai assisted, i understand the code but came at the end of using .html in my thinking and ai put me on to .append(), this adds to option to select once the add service button on services.html has been clicked
 $(function () {
   const SERVICE = localStorage.getItem("Service");
   if (SERVICE) {

@@ -1,7 +1,7 @@
 :root {
-  --background-color: #f4f6f2;
+  --background-color: #dce1d6;
   --text-color: #20231f;
-  --accent-color: #8a5a3c;
+  --accent-color: #bb8868;
   --surface-color: #e3e7e2;
 }
 
@@ -15,7 +15,7 @@ body {
   color: var(--text-color);
   font-size: 2rem;
   font-weight: 400;
-  background-color: var(--accent-color);
+  background-color: var(--background-color);
 }
 
 nav {
@@ -27,8 +27,10 @@ nav {
 }
 
 h1 {
-  text-align: center;
   padding: 10px;
+  color: var(--text-color);
+  font-family: "Original Surfer", sans-serif;
+  margin-left: 125px;
 }
 
 .p1 {
@@ -41,13 +43,18 @@ h1 {
   box-shadow: 5px 5px 10px 2px black;
   border-right: solid 5px red;
   background-color: var(--background-color);
-  border-top: dotted 5px red;
+  border-bottom: dotted 5px red;
+  margin-left: 150px;
+  min-width: 40%;
+  min-height: 30%;
 }
 
 .p2 {
   font-size: 1.5rem;
   margin: 50px;
   padding: 15px;
+  min-width: 40%;
+  min-height: 30%;
   width: 40%;
   height: 30%;
   border: 2px solid black;
@@ -61,7 +68,6 @@ h1 {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 
@@ -71,7 +77,8 @@ h1 {
   border-right: solid 5px green;
   border-bottom: dotted 5px green;
   box-shadow: 5px 5px 10px 2px black;
-  margin: 10px;
+  margin-right: 100px;
+  margin-top: 60px;
   display: inline-block;
 }
 
@@ -79,8 +86,8 @@ h1 {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  margin-left: 100px;
 }
 
 .image-container-2 img {
@@ -89,5 +96,5 @@ h1 {
   border-left: solid 5px yellow;
   box-shadow: 5px 5px 10px 2px black;
   margin-left: 10px;
-  border-bottom: dotted 5px yellow;
+  border-top: dotted 5px yellow;
 }

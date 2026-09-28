@@ -13,7 +13,7 @@
   --background-color: #171c17;
   --surface-color: #242c24;
   --text-color: #e2e8dc;
-  --accent-color: #c17a50;
+  --accent-color: #7a3e1b;
 }
 
 body {
@@ -23,6 +23,7 @@ body {
   font-size: 2rem;
   font-weight: 400;
   background-color: var(--background-color);
+  transition: background-color 0.5s ease;
 }
 
 nav {
@@ -52,6 +53,22 @@ nav {
 .cert {
   height: 35px;
   width: 35px;
+}
+
+#toggle {
+  height: 35px;
+  width: 70px;
+  background-color: green;
+  border: 2px solid darkgreen;
+  font-size: 18px;
+  margin-top: 5px;
+  border-radius: 5px;
+  margin-left: 25px;
+}
+
+#toggle:hover {
+  background-color: rgb(73, 128, 73);
+  transition: opacity 0.5s ease;
 }
 
 a {
@@ -155,7 +172,7 @@ h1 {
 }
 
 .footer {
-  margin: 0;
+  margin: 10px 10px;
   padding: 10px;
   font-size: 3rem;
   background-color: var(--accent-color);
@@ -164,6 +181,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 .footer p {

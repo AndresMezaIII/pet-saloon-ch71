@@ -1,38 +1,88 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
 :root {
-  --background-color: #f4f6f2;
+  --background-color: #80b83c;
   --text-color: #20231f;
-  --accent-color: #8a5a3c;
-  --surface-color: #e3e7e2;
+  --accent-color: #9a5b34;
+  --surface-color: #dce1d6;
 }
 
 * {
-  padding: 5px;
+  font-size: 67.5%;
+}
+
+.dark-mode {
+  --background-color: #171c17;
+  --surface-color: #242c24;
+  --text-color: #e2e8dc;
+  --accent-color: #7a3e1b;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  padding: 1rem;
-  height: 100vh;
-  width: 100vw;
+  font-weight: 200;
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 400;
   background-color: var(--background-color);
-}
-
-.dark-mode {
-  --background-color: #041a63;
-  --text-color: #dfe5e1;
-  --accent-color: #d49a78;
-  --surface-color: #4c4d49;
+  transition: background-color 0.5s ease;
 }
 
 nav {
-  width: 98.25%;
-  border-radius: 10px;
+  background-color: var(--accent-color);
+  font-size: 96px;
+  margin: 10px 10px;
+  border-radius: 4px;
+  color: white;
+  font-family: "Original Surfer", sans-serif;
 }
 
-.navbar {
+.paws {
+  width: 35;
+  height: 35px;
+}
+
+.doghouse {
+  height: 35px;
+  width: 35px;
+}
+
+.bubbles {
+  height: 35px;
+  width: 35px;
+}
+
+.cert {
+  height: 35px;
+  width: 35px;
+}
+
+#toggle {
+  height: 35px;
+  width: 70px;
+  background-color: green;
+  border: 2px solid darkgreen;
+  font-size: 18px;
+  margin-top: 5px;
+  border-radius: 5px;
+  margin-left: 25px;
+}
+
+#toggle:hover {
+  background-color: rgb(73, 128, 73);
+  transition: opacity 0.5s ease;
+}
+
+a {
+  font-family: "Original Surfer", sans-serif;
+}
+
+nav {
   background-color: var(--accent-color);
+  font-size: 96px;
+  margin: 10px 10px;
+  border-radius: 4px;
   color: white;
+  font-family: "Original Surfer", sans-serif;
 }
 
 a {

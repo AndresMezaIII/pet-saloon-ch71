@@ -1,12 +1,19 @@
 :root {
-  --background-color: #dce1d6;
+  --background-color: #80b83c;
   --text-color: #20231f;
-  --accent-color: #bb8868;
-  --surface-color: #e3e7e2;
+  --accent-color: #9a5b34;
+  --surface-color: #dce1d6;
 }
 
 * {
   font-size: 67.5%;
+}
+
+.dark-mode {
+  --background-color: #171c17;
+  --surface-color: #242c24;
+  --text-color: #e2e8dc;
+  --accent-color: #c17a50;
 }
 
 body {
@@ -19,18 +26,44 @@ body {
 }
 
 nav {
-  background-color: var(--background-color);
+  background-color: var(--accent-color);
   font-size: 96px;
   margin: 10px 10px;
   border-radius: 4px;
   color: white;
+  font-family: "Original Surfer", sans-serif;
+}
+
+.paws {
+  width: 35;
+  height: 35px;
+}
+
+.doghouse {
+  height: 35px;
+  width: 35px;
+}
+
+.bubbles {
+  height: 35px;
+  width: 35px;
+}
+
+.cert {
+  height: 35px;
+  width: 35px;
+}
+
+a {
+  font-family: "Original Surfer", sans-serif;
 }
 
 h1 {
   padding: 10px;
   color: var(--text-color);
   font-family: "Original Surfer", sans-serif;
-  margin-left: 125px;
+  text-align: center;
+  font-size: 4rem;
 }
 
 .p1 {
@@ -42,7 +75,7 @@ h1 {
   border: 2px solid black;
   box-shadow: 5px 5px 10px 2px black;
   border-right: solid 5px red;
-  background-color: var(--background-color);
+  background-color: var(--surface-color);
   border-bottom: dotted 5px red;
   margin-left: 150px;
   min-width: 40%;
@@ -60,7 +93,7 @@ h1 {
   border: 2px solid black;
   box-shadow: 5px 5px 10px 2px black;
   border-left: solid 5px blue;
-  background-color: var(--background-color);
+  background-color: var(--surface-color);
   border-top: dotted 5px blue;
 }
 
@@ -69,6 +102,7 @@ h1 {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .image-container img {
@@ -88,6 +122,7 @@ h1 {
   display: flex;
   align-items: center;
   margin-left: 100px;
+  justify-content: center;
 }
 
 .image-container-2 img {
@@ -97,4 +132,41 @@ h1 {
   box-shadow: 5px 5px 10px 2px black;
   margin-left: 10px;
   border-top: dotted 5px yellow;
+  margin-bottom: 30px;
+}
+
+.fb {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.insta {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+}
+
+.footer-paws {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 6.5px;
+  margin-right: 6.5px;
+}
+
+.footer {
+  margin: 0;
+  padding: 10px;
+  font-size: 3rem;
+  background-color: var(--accent-color);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  margin-top: 10px;
+  align-self: end;
 }
